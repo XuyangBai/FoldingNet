@@ -92,9 +92,6 @@ class ShapeNetDataset(data.Dataset):
         return len(self.datapath)
 
 
-# class 3DMatchDataset(data.Dataset):
-
-
 if __name__ == '__main__':
     dataset = "shapenet"
     datapath = "./data/shapenetcore_partanno_segmentation_benchmark_v0"
