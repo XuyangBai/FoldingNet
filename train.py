@@ -1,6 +1,7 @@
 import os
 import time
 import shutil
+import torch
 from torch import optim
 from trainer import Trainer
 from model import FoldNet
@@ -19,9 +20,9 @@ class Args(object):
         self.num_points = 2048
         self.batch_size = 16
         self.dataset = 'shapenet'
-        self.data_dir = '/data/shapenetcore_partanno_segmentation_benchmark_v0'
+        self.data_dir = 'data/shapenetcore_partanno_segmentation_benchmark_v0'
 
-        self.gpu_mode = True
+        self.gpu_mode = torch.cuda.is_available()
         self.verbose = False
 
         # model & optimizer
